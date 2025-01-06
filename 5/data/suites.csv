@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Jan 06 23:58:02 GMT 2025","Mon Jan 06 23:58:03 GMT 2025","1154","chromium","example.test.ts","","","","get started link",""
+"passed","Mon Jan 06 23:58:02 GMT 2025","Mon Jan 06 23:58:03 GMT 2025","894","chromium","example.test.ts","","","","has title",""
