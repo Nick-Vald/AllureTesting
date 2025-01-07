@@ -57,7 +57,7 @@ jobs:
       continue-on-error: true
       with:
         ref: gh-pages
-        path: allure-results
+        path: gh-pages/allure-results
   
     - name: Build test report
       uses: simple-elf/allure-report-action@v1.7
