@@ -57,14 +57,14 @@ jobs:
       continue-on-error: true
       with:
         ref: gh-pages
-        path: gh-pages/allure-results
+        path: allure-results
   
     - name: Build test report
       uses: simple-elf/allure-report-action@v1.7
       if: always()
       #id: allure-report
       with:
-        gh_pages: gh-pages-${{ github.event.inputs.region }}
+        gh_pages: gh-pages
         allure_history: allure-history
         allure_results: allure-results
         allure_report: allure-report
