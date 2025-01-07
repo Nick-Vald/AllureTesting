@@ -68,6 +68,7 @@ jobs:
         allure_history: allure-history
         allure_results: allure-results
         allure_report: allure-report
+        keep_reports: 30
 
 
     - name: Publish test report
