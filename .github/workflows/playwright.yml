@@ -56,15 +56,15 @@ jobs:
       if: always()
       continue-on-error: true
       with:
-        ref: gh-pages
-        path: gh-pages
+        ref: gh-pages-${{ github.event.inputs.region }}
+        path: gh-pages-${{ github.event.inputs.region }}
   
     - name: Build test report
       uses: simple-elf/allure-report-action@v1.7
       if: always()
-      id: allure-report
+      #id: allure-report
       with:
-        gh_pages: gh-pages
+        gh_pages: gh-pages-${{ github.event.inputs.region }}
         allure_history: allure-history
         allure_results: allure-results
         allure_report: allure-report
@@ -75,7 +75,7 @@ jobs:
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_branch: gh-pages
+        publish_branch: gh-pages-${{ github.event.inputs.region }}
         publish_dir: allure-history
         keep_files: true
 
